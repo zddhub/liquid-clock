@@ -1,5 +1,5 @@
 import './Hero.css';
-import logo from '../assets/logo.png';
+import heroImage from '../assets/hero_screenshot.png';
 
 export default function Hero() {
   return `
@@ -12,7 +12,7 @@ export default function Hero() {
           <a href="#features" class="btn btn-secondary">Explore Features</a>
         </div>
         <div class="hero-visual">
-           <img src="${logo}" alt="Liquid Clock App Icon" class="hero-logo-img" />
+           <img src="${heroImage}" alt="Liquid Clock App Screenshot" class="hero-screenshot-img" />
         </div>
       </div>
     </section>
