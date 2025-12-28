@@ -1,0 +1,127 @@
+.hero {
+    padding: 120px 0 80px;
+    /* Increased top padding for breathing room */
+    text-align: center;
+    background-color: transparent;
+    /* Subtle glow specific to hero */
+    background-image: radial-gradient(circle at 50% 0%, rgba(255, 45, 85, 0.08) 0%, transparent 70%);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    /* Increased gap */
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    /* Large like Swift.org */
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    max-width: 800px;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--color-primary), #FF375F);
+    /* Red to Pink */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 980px;
+    /* Pill shape */
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    /* border: 1px solid var(--color-primary); */
+    /* Swift often uses just text link or light bg */
+}
+
+.btn-secondary:hover {
+    text-decoration: underline;
+}
+
+.hero-visual {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+}
+
+.clock-demo {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    z-index: 1;
+}
+
+.hero-logo-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(255, 45, 85, 0.3));
+    /* Glow effect matching new color */
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.liquid-blob {
+    /* Simple placeholder effect */
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+}
