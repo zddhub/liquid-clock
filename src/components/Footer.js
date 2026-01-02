@@ -9,7 +9,7 @@ export default function Footer() {
             <h4 class="footer-heading">Product</h4>
             <ul>
               <li><a href="#features">Features</a></li>
-              <li><a href="#download">Download</a></li>
+              <li><a href="https://apps.apple.com/cn/app/liquid-clock-no-ads/id6757009818" target="_blank">Download</a></li>
               <li><a href="#">Changelog</a></li>
             </ul>
           </div>

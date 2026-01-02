@@ -12,7 +12,7 @@ export default function Header() {
         <nav class="main-nav">
           <ul>
             <li><a href="#features">Features</a></li>
-            <li><a href="#download">Download</a></li>
+            <li><a href="https://apps.apple.com/cn/app/liquid-clock-no-ads/id6757009818" target="_blank">Download</a></li>
             <li><a href="https://github.com/liquid-clock" target="_blank">GitHub</a></li>
           </ul>
         </nav>
