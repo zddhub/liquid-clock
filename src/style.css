@@ -9,10 +9,10 @@
   --color-text-secondary: #5f6b7d;
   --color-text-muted: #7e8999;
   --color-line: rgba(23, 34, 51, 0.1);
-  --color-primary: #de6a3b;
-  --color-primary-hover: #c95b2c;
-  --color-accent: #2d8f85;
-  --color-accent-soft: #d6efe7;
+  --color-primary: #fb5976;
+  --color-primary-hover: #e34f6d;
+  --color-accent: #fb5976;
+  --color-accent-soft: #ffd7de;
   --shadow-soft: 0 20px 60px rgba(23, 34, 51, 0.08);
   --shadow-strong: 0 30px 80px rgba(23, 34, 51, 0.14);
 
@@ -38,8 +38,8 @@ html {
 body {
   font-family: var(--font-body);
   background:
-    radial-gradient(circle at top left, rgba(222, 106, 59, 0.18), transparent 28%),
-    radial-gradient(circle at 85% 10%, rgba(45, 143, 133, 0.16), transparent 22%),
+    radial-gradient(circle at top left, rgba(251, 89, 118, 0.18), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(251, 89, 118, 0.1), transparent 22%),
     linear-gradient(180deg, #fff8ef 0%, #f6efe4 48%, #f3eadf 100%);
   color: var(--color-text);
   line-height: 1.5;
@@ -91,7 +91,7 @@ h4 {
 }
 
 ::selection {
-  background: rgba(222, 106, 59, 0.18);
+  background: rgba(251, 89, 118, 0.18);
 }
 
 #top,

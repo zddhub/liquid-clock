@@ -1,10 +1,24 @@
 import './Features.css';
 import screenshotCustomizationPhone from '../assets/clocks/iPhone-6-9-V01-04.png';
-import screenshotClockPhone from '../assets/clocks/iPhone-6-9-V01-01.png';
 import screenshotFocusTablet from '../assets/clocks/iPad-13-V01-02.png';
 import screenshotSmartPhone from '../assets/clocks/iPhone-6-9-V01-06.png';
 
 export default function Features() {
+  const introHighlights = [
+    {
+      title: 'Clock + focus in one place',
+      detail: 'Time display, Pomodoro sessions, countdowns, and stopwatch tools live in one calm surface.'
+    },
+    {
+      title: 'Designed for nearby screens',
+      detail: 'A better fit for docks, stands, desks, and bedside use than a generic timer app.'
+    },
+    {
+      title: 'Free to start',
+      detail: 'Start with the essentials, then unlock deeper customization when you want more control.'
+    }
+  ];
+
   const features = [
     {
       title: 'Immersive Flip Clock',
@@ -64,10 +78,7 @@ export default function Features() {
         'Themes ranging from minimal to vivid'
       ],
       label: 'Clock Mode',
-      image: screenshotClockPhone,
-      alt: 'Liquid Clock clock worth leaving on screenshot on iPhone',
-      device: 'iPhone screenshot',
-      orientation: 'portrait'
+      visual: 'clock-preview'
     },
     {
       title: 'Built For Focus',
@@ -139,12 +150,24 @@ export default function Features() {
   return `
     <section id="features" class="features section-block">
       <div class="container section-intro">
-        <p class="section-kicker">A calmer clock for deep work, bedside use, and everyday timing.</p>
-        <h2 class="section-title">Beautiful by default. Focused when you need it.</h2>
-        <p class="section-copy">Liquid Clock is a beautiful clock first, a practical focus tool second, and a thoughtful bedside or desk companion throughout the day.</p>
+        <div class="features-intro-shell">
+          <div class="features-intro-copy">
+            <p class="section-kicker">A calmer clock for deep work, bedside use, and everyday timing.</p>
+            <h2 class="section-title">Beautiful by default. Focused when you need it.</h2>
+            <p class="section-copy">Liquid Clock is a beautiful clock first, a practical focus tool second, and a thoughtful bedside or desk companion throughout the day.</p>
+          </div>
+          <div class="features-intro-meta">
+            ${introHighlights.map((item) => `
+              <div class="intro-meta-card">
+                <strong>${item.title}</strong>
+                <span>${item.detail}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
         <div class="features-grid">
-          ${features.map((feature) => `
-            <article class="feature-card">
+          ${features.map((feature, index) => `
+            <article class="feature-card ${index === 0 ? 'feature-card-featured' : ''}">
               <div class="feature-icon">${feature.icon}</div>
               <h3 class="feature-title">${feature.title}</h3>
               <p class="feature-desc">${feature.description}</p>
@@ -198,8 +221,25 @@ export default function Features() {
         ${detailSections.map((section, index) => `
           <section class="detail-panel ${index % 2 === 1 ? 'detail-panel-reverse' : ''}">
             <div class="detail-visual detail-visual-${index + 1}">
-              <span class="detail-device-tag">${section.device}</span>
-              <img src="${section.image}" alt="${section.alt}" class="detail-screenshot detail-screenshot-${section.orientation}" />
+              ${section.visual === 'clock-preview' ? `
+                <div class="detail-clock-preview" aria-hidden="true">
+                  <div class="detail-clock-topbar">
+                    <span>Flip Clock</span>
+                    <span>Ambient Mode</span>
+                  </div>
+                  <div class="detail-clock-screen">
+                    <span class="detail-clock-time">10:08</span>
+                    <span class="detail-clock-meta">Tue 30 Apr</span>
+                  </div>
+                  <div class="detail-clock-chips">
+                    <span class="detail-clock-chip">Readable from across the room</span>
+                    <span class="detail-clock-chip">Quiet, premium presence</span>
+                  </div>
+                </div>
+              ` : `
+                <span class="detail-device-tag">${section.device}</span>
+                <img src="${section.image}" alt="${section.alt}" class="detail-screenshot detail-screenshot-${section.orientation}" />
+              `}
             </div>
             <div class="detail-copy">
               <p class="section-kicker">${section.label}</p>

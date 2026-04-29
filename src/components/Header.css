@@ -55,9 +55,9 @@
  }
 
 .nav-cta {
-    background: var(--color-text);
+    background: var(--color-primary);
     color: #fff !important;
-    box-shadow: 0 12px 30px rgba(23, 34, 51, 0.16);
+    box-shadow: 0 12px 30px rgba(251, 89, 118, 0.24);
 }
 
 .nav-cta:hover {
@@ -124,6 +124,12 @@
         padding: 10px 12px;
         background: rgba(255, 255, 255, 0.68);
         border: 1px solid rgba(23, 34, 51, 0.06);
+    }
+
+    .main-nav a.nav-cta {
+        background: var(--color-primary);
+        border-color: transparent;
+        color: #fff !important;
     }
 
     .nav-cta {

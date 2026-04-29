@@ -10,6 +10,8 @@ export default function Hero() {
     'Built for bedside and desk use'
   ];
 
+  const heroFacts = ['iPhone + iPad', 'Free to start', 'Clock + focus'];
+
   const valueStrip = [
     'A clock that looks intentional, not utilitarian',
     'Focus tools that stay simple and full-screen',
@@ -26,6 +28,9 @@ export default function Hero() {
           <div class="hero-actions">
             <a href="${appStoreUrl}" class="btn btn-primary" target="_blank" rel="noreferrer">Download on the App Store</a>
             <a href="#features" class="btn btn-secondary">See Features</a>
+          </div>
+          <div class="hero-facts">
+            ${heroFacts.map((fact) => `<span class="hero-fact-pill">${fact}</span>`).join('')}
           </div>
           <ul class="hero-points">
             ${heroPoints.map((point) => `<li>${point}</li>`).join('')}
@@ -48,13 +53,15 @@ export default function Hero() {
                 <img src="${heroPhoneImage}" alt="Liquid Clock full-screen flip clock on iPhone" class="hero-screenshot-img hero-screenshot-phone" />
               </figure>
             </div>
-            <div class="showcase-chip showcase-chip-left">
-              <strong>Pomodoro</strong>
-              <span>25 minute focus sessions</span>
-            </div>
-            <div class="showcase-chip showcase-chip-right">
-              <strong>Countdowns</strong>
-              <span>Target dates and timers</span>
+            <div class="showcase-notes">
+              <div class="showcase-chip">
+                <strong>Pomodoro</strong>
+                <span>25 minute focus sessions</span>
+              </div>
+              <div class="showcase-chip">
+                <strong>Countdowns</strong>
+                <span>Target dates and timers</span>
+              </div>
             </div>
           </div>
         </div>
