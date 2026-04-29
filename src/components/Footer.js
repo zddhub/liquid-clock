@@ -1,44 +1,28 @@
 import './Footer.css';
 
 export default function Footer() {
+  const appStoreUrl = 'https://apps.apple.com/cn/app/liquid-clock-no-ads/id6757009818';
+
   return `
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <h4 class="footer-heading">Product</h4>
-            <ul>
-              <li><a href="#features">Features</a></li>
-              <li><a href="https://apps.apple.com/cn/app/liquid-clock-no-ads/id6757009818" target="_blank">Download</a></li>
-              <li><a href="#">Changelog</a></li>
-            </ul>
+      <div class="container footer-shell">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <p class="footer-heading">Liquid Clock</p>
+            <p class="footer-summary">Liquid Clock is a customizable flip clock, Pomodoro timer, and countdown app for iPhone and iPad.</p>
           </div>
-          <div class="footer-col">
-            <h4 class="footer-heading">Resources</h4>
-            <ul>
-              <li><a href="#">Documentation</a></li>
-              <li><a href="#">Community</a></li>
-              <li><a href="#">Help Center</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4 class="footer-heading">Legal</h4>
-            <ul>
-              <li><a href="./privacy.html">Privacy Policy</a></li>
-              <li><a href="./terms.html">Terms of Service</a></li>
-            </ul>
-          </div>
-          <div class="footer-col newsletter">
-            <h4 class="footer-heading">Stay Updated</h4>
-            <p class="footer-text">Get the latest updates on Liquid Clock.</p>
-            <form class="subscribe-form" onsubmit="event.preventDefault();">
-              <input type="email" placeholder="Enter your email" required />
-              <button type="submit" class="btn-small">Subscribe</button>
-            </form>
+          <div class="footer-links">
+            <a href="#features">Features</a>
+            <a href="#use-cases">Use Cases</a>
+            <a href="#faq">Support</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./terms.html">Terms of Service</a>
+            <a href="${appStoreUrl}" target="_blank" rel="noreferrer">Download on the App Store</a>
           </div>
         </div>
         <div class="footer-bottom">
           <p>&copy; ${new Date().getFullYear()} Liquid Clock. All rights reserved.</p>
+          <p>A calmer clock for deep work, bedside use, and everyday timing.</p>
         </div>
       </div>
     </footer>
