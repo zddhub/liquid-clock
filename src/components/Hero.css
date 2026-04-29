@@ -42,6 +42,16 @@
     margin-bottom: 22px;
 }
 
+.hero-eyebrow-brand {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(251, 89, 118, 0.14);
+    color: var(--color-primary);
+    letter-spacing: 0.06em;
+}
+
 .hero-title {
     font-size: clamp(3rem, 7vw, 5.6rem);
     font-weight: 800;

@@ -22,7 +22,7 @@ export default function Hero() {
     <section class="hero" id="top">
       <div class="container hero-content">
         <div class="hero-copy">
-          <p class="hero-eyebrow">Calm time, beautifully displayed</p>
+          <p class="hero-eyebrow"><span class="hero-eyebrow-brand">Liquid Clock</span><span>Calm time, beautifully displayed</span></p>
           <h1 class="hero-title">Turn your screen into a <span class="gradient-text">clock worth leaving on.</span></h1>
           <p class="hero-subtitle">Liquid Clock transforms your iPhone or iPad into a beautiful flip-style clock with focus sessions, countdown tools, and smart display behavior for bedside and desk use.</p>
           <div class="hero-actions">
