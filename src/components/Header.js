@@ -15,6 +15,7 @@ export default function Header() {
           <ul>
             <li><a href="#features">Features</a></li>
             <li><a href="#use-cases">Use Cases</a></li>
+            <li><a href="#changelog">What's New</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="${appStoreUrl}" target="_blank" rel="noreferrer" class="nav-cta">Download</a></li>
           </ul>

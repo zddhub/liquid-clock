@@ -261,6 +261,18 @@
     padding: 10px;
     border-radius: 30px;
     transform: rotate(5deg);
+    z-index: 2;
+}
+
+.showcase-device-mac {
+    position: absolute;
+    right: -30px;
+    top: 10px;
+    width: min(52%, 300px);
+    padding: 8px;
+    border-radius: 18px;
+    transform: rotate(-3deg);
+    z-index: 1;
 }
 
 .showcase-topbar {
@@ -298,6 +310,10 @@
 
 .hero-screenshot-phone {
     border-radius: 22px;
+}
+
+.hero-screenshot-mac {
+    border-radius: 12px;
 }
 
 .showcase-chip {
@@ -435,8 +451,13 @@
     }
 
     .showcase-device-phone {
-        width: min(48%, 220px);
+        width: min(44%, 200px);
         left: 0;
+    }
+
+    .showcase-device-mac {
+        width: min(48%, 240px);
+        right: -10px;
     }
 
     .showcase-chip {
@@ -477,7 +498,8 @@
     }
 
     .showcase-device-tablet,
-    .showcase-device-phone {
+    .showcase-device-phone,
+    .showcase-device-mac {
         position: static;
         width: 100%;
         transform: none;

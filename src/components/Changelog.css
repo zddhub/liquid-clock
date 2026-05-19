@@ -1,0 +1,204 @@
+.changelog {
+    padding: 32px 0 64px;
+}
+
+.changelog-summary {
+    color: var(--color-text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: rgba(251, 89, 118, 0.06);
+    border: 1px solid rgba(251, 89, 118, 0.1);
+}
+
+.changelog-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 48px;
+}
+
+.changelog-stat {
+    padding: 28px 24px;
+    border-radius: 24px;
+    background: var(--color-surface);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    display: grid;
+    gap: 6px;
+}
+
+.changelog-stat strong {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.changelog-stat span {
+    color: var(--color-text-secondary);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.changelog-timeline {
+    display: grid;
+    gap: 28px;
+}
+
+.changelog-release {
+    border-radius: 30px;
+    background: var(--color-surface);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.changelog-release:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+}
+
+.changelog-release-head {
+    padding: 28px 32px 20px;
+    border-bottom: 1px solid rgba(23, 34, 51, 0.06);
+    display: grid;
+    gap: 12px;
+}
+
+.changelog-version-badge {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.changelog-version {
+    display: inline-flex;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--color-primary), #ff7d94);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.changelog-date {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.changelog-commits {
+    margin-left: auto;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(23, 34, 51, 0.05);
+    color: var(--color-text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.changelog-label {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.changelog-sections {
+    padding: 24px 32px 28px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.changelog-section h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.changelog-section h4::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.changelog-section ul {
+    display: grid;
+    gap: 6px;
+}
+
+.changelog-section li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.changelog-section li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(23, 34, 51, 0.16);
+}
+
+@media (max-width: 840px) {
+    .changelog-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .changelog-sections {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .changelog-release-head {
+        padding: 22px 20px 16px;
+    }
+
+    .changelog-sections {
+        padding: 18px 20px 22px;
+    }
+
+    .changelog-label {
+        font-size: 1.2rem;
+    }
+
+    .changelog-stats {
+        gap: 12px;
+    }
+
+    .changelog-stat strong {
+        font-size: 1.8rem;
+    }
+}

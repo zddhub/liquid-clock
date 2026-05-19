@@ -97,6 +97,7 @@ h4 {
 #top,
 #features,
 #use-cases,
+#changelog,
 #faq {
   scroll-margin-top: calc(var(--header-height) + 24px);
 }
@@ -113,6 +114,7 @@ h4 {
   #top,
   #features,
   #use-cases,
+  #changelog,
   #faq {
     scroll-margin-top: 20px;
   }

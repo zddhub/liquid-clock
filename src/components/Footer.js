@@ -9,11 +9,12 @@ export default function Footer() {
         <div class="footer-top">
           <div class="footer-brand">
             <p class="footer-heading">Liquid Clock</p>
-            <p class="footer-summary">Liquid Clock is a customizable flip clock, Pomodoro timer, and countdown app for iPhone and iPad.</p>
+            <p class="footer-summary">Liquid Clock is a customizable flip clock, widget, Pomodoro timer, and countdown app for iPhone, iPad, and Mac.</p>
           </div>
           <div class="footer-links">
             <a href="#features">Features</a>
             <a href="#use-cases">Use Cases</a>
+            <a href="#changelog">What's New</a>
             <a href="#faq">Support</a>
             <a href="./privacy.html">Privacy Policy</a>
             <a href="./terms.html">Terms of Service</a>
