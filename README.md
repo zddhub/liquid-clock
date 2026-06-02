@@ -8,14 +8,20 @@
   </p>
 </div>
 
-Liquid Clock transforms your device into a beautiful bedside or desk display, combining fluid aesthetics with powerful focus tools.
+A clock worth leaving on. Liquid Clock transforms your iPhone, iPad, or Mac into a beautiful flip-style clock with a home screen widget, focus sessions, countdown tools, and smart display behavior for bedside and desk use.
 
 ## Features
 
-- **Stunning Visuals**: Fluid animations and premium design.
-- **Focus Tools**: Built-in features to help you stay productive.
-- **Customizable**: Tailor the experience to your needs.
-- **Privacy First**: Your data stays on your device.
+- **Immersive Flip Clock** — Large, legible time with a flip-style design that feels bold and modern from across the room.
+- **Home Screen Widget (iOS)** — Self-contained flip clock widget synced to your style preferences, available in small, medium, and large families.
+- **Pomodoro Focus Sessions** — Configurable work/break cycles in a distraction-light, full-screen experience.
+- **Countdown & Stopwatch** — Classic countdown timer, stopwatch mode, and target date countdowns.
+- **Deep Customization** — 10 digit colors (including mint, cyan, indigo, brown, and gray), multiple fonts, card colors, and animated backgrounds.
+- **Mirror Effect** — Mirror the clock face for HUD-style use in reflections or car windshields.
+- **Orientation Lock** — Lock the clock to portrait or landscape, independent of device rotation.
+- **iPhone, iPad + Mac** — Native on every Apple platform with full settings, keyboard shortcuts, and polished chrome.
+- **9 Languages** — 410 translated strings with automatic system language detection.
+- **No Ads, No Subscriptions** — Free to start. Pro is a one-time purchase, not a subscription. No ads, ever.
 
 ## Tech Stack
 

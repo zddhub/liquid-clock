@@ -9,7 +9,7 @@ export default function Footer() {
         <div class="footer-top">
           <div class="footer-brand">
             <p class="footer-heading">Liquid Clock</p>
-            <p class="footer-summary">Liquid Clock is a customizable flip clock, widget, Pomodoro timer, and countdown app for iPhone, iPad, and Mac.</p>
+            <p class="footer-summary">A clock worth leaving on. Liquid Clock is a customizable flip clock with widget, Pomodoro, countdown tools, mirror effect, and native macOS support.</p>
           </div>
           <div class="footer-links">
             <a href="#features">Features</a>
@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         <div class="footer-bottom">
           <p>&copy; ${new Date().getFullYear()} Liquid Clock. All rights reserved.</p>
-          <p>A calmer clock for deep work, bedside use, and everyday timing.</p>
+          <p>A clock worth leaving on — for deep work, bedside use, and everyday timing.</p>
         </div>
       </div>
     </footer>

@@ -51,23 +51,65 @@
 
 .changelog-timeline {
     display: grid;
-    gap: 28px;
+    gap: 0;
+    position: relative;
+    padding-left: 44px;
+}
+
+.changelog-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background: linear-gradient(180deg,
+        var(--color-primary) 0%,
+        rgba(251, 89, 118, 0.4) 30%,
+        rgba(251, 89, 118, 0.15) 70%,
+        rgba(251, 89, 118, 0.04) 100%);
+    border-radius: 1px;
 }
 
 .changelog-release {
+    position: relative;
     border-radius: 30px;
-    background: var(--color-surface);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, 0.78);
-    box-shadow: var(--shadow-soft);
+    background: rgba(255, 252, 247, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-glass-border);
+    box-shadow: var(--shadow-glass);
     overflow: hidden;
-    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+    transition: transform var(--transition-glass), box-shadow var(--transition-glass);
+    margin-bottom: 28px;
+}
+
+.changelog-release:last-child {
+    margin-bottom: 0;
+}
+
+.changelog-release::before {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 36px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    box-shadow: 0 0 0 6px rgba(251, 89, 118, 0.12), 0 0 24px rgba(251, 89, 118, 0.2);
+    z-index: 1;
+}
+
+.changelog-release:first-child::before {
+    background: #fff;
+    box-shadow: 0 0 0 6px rgba(251, 89, 118, 0.18), 0 0 32px rgba(251, 89, 118, 0.3);
+    border: 3px solid var(--color-primary);
 }
 
 .changelog-release:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-strong);
+    box-shadow: var(--shadow-glass-hover);
 }
 
 .changelog-release-head {
@@ -179,6 +221,20 @@
     .changelog-sections {
         grid-template-columns: 1fr;
     }
+
+    .changelog-timeline {
+        padding-left: 36px;
+    }
+
+    .changelog-timeline::before {
+        left: 11px;
+    }
+
+    .changelog-release::before {
+        left: -33px;
+        width: 12px;
+        height: 12px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -200,5 +256,25 @@
 
     .changelog-stat strong {
         font-size: 1.8rem;
+    }
+
+    .changelog-timeline {
+        padding-left: 28px;
+    }
+
+    .changelog-timeline::before {
+        left: 7px;
+    }
+
+    .changelog-release::before {
+        left: -25px;
+        top: 28px;
+        width: 10px;
+        height: 10px;
+        box-shadow: 0 0 0 4px rgba(251, 89, 118, 0.12), 0 0 16px rgba(251, 89, 118, 0.2);
+    }
+
+    .changelog-release:first-child::before {
+        box-shadow: 0 0 0 4px rgba(251, 89, 118, 0.18), 0 0 20px rgba(251, 89, 118, 0.3);
     }
 }

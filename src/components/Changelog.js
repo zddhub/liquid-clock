@@ -3,6 +3,40 @@ import './Changelog.css';
 export default function Changelog() {
   const releases = [
     {
+      version: '2.4.0',
+      date: 'June 2026',
+      commits: 32,
+      label: 'Pin Window, Onboarding & Paywall Polish',
+      sections: [
+        {
+          title: 'Pin Window (macOS)',
+          items: [
+            'New toolbar button and keyboard shortcut (⌘⇧P) to float the clock window above other apps on macOS.'
+          ]
+        },
+        {
+          title: 'Onboarding & Paywall Redesign',
+          items: [
+            'Rewritten onboarding pages and paywall feature descriptions for better conversion. The flip clock widget is now featured in both flows.',
+            'Full-width purchase button on iOS and smoother paywall scrolling.'
+          ]
+        },
+        {
+          title: 'Localization Polish',
+          items: [
+            'Runtime localization fixes: Q&A answers, app display name (液体时钟), language names, widget date formatting, AM/PM labels, tick sound titles, and Active Hours picker labels now all respect the in-app language setting immediately.',
+            'Chinese spacing corrections and locale-aware date formatting throughout.'
+          ]
+        },
+        {
+          title: 'Infrastructure',
+          items: [
+            'QuickPurchase is now a remote SPM dependency. macOS auto-relaunch on language change so system chrome picks up the new locale.'
+          ]
+        }
+      ]
+    },
+    {
       version: '2.3.0',
       date: 'May 2026',
       commits: 52,
@@ -18,7 +52,7 @@ export default function Changelog() {
         {
           title: 'Internationalization',
           items: [
-            '410 translated strings across 9 languages, with system language auto-detection on first launch.'
+            '410 translated strings across 10 languages, with system language auto-detection on first launch.'
           ]
         },
         {
@@ -99,9 +133,9 @@ export default function Changelog() {
   ];
 
   const stats = [
-    { value: '72', label: 'Commits' },
-    { value: '3', label: 'Releases' },
-    { value: '9', label: 'Languages' },
+    { value: '104', label: 'Commits' },
+    { value: '4', label: 'Releases' },
+    { value: '10', label: 'Languages' },
     { value: '410', label: 'Translated strings' }
   ];
 
@@ -115,7 +149,7 @@ export default function Changelog() {
           </div>
         </div>
 
-        <p class="changelog-summary">May 1 - 18, 2026 — 72 commits across three releases. Headline features: Widget (2.3), i18n (2.3), macOS (2.1), Mirror Effect (2.2).</p>
+        <p class="changelog-summary">May 1 – June 2, 2026 — 104 commits across four releases. Headline features: Pin Window (2.4), Widget + i18n (2.3), Mirror Effect (2.2), macOS (2.1).</p>
 
         <div class="changelog-stats">
           ${stats.map((stat) => `

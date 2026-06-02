@@ -1,30 +1,28 @@
 import './Hero.css';
-import heroPhoneImage from '../assets/clocks/iPhone-6-9-V01-01.png';
-import heroTabletImage from '../assets/clocks/iPad-13-V01-01.png';
-import heroMacImage from '../assets/clocks/macOS-14-2-V01-01.png';
+import heroImage from '../assets/clocks/hero-image.png';
 
 export default function Hero() {
   const appStoreUrl = 'https://apps.apple.com/cn/app/liquid-clock-no-ads/id6757009818';
   const heroPoints = [
-    'Customizable flip clock with widget',
-    'Pomodoro, stopwatch, countdown, and target date modes',
-    'Built for bedside, desk, and Mac use'
+    'Widget, Pomodoro, stopwatch & countdown',
+    'Mirror effect and orientation lock',
+    'iPhone, iPad, and Mac — one purchase'
   ];
 
-  const heroFacts = ['iPhone, iPad + Mac', 'Free to start', '9 languages'];
+  const heroFacts = ['iPhone, iPad + Mac', 'Free to start', '10 languages'];
 
   const valueStrip = [
-    'A clock that looks intentional, not utilitarian',
-    'Focus tools that stay simple and full-screen',
-    'Now on Mac with full native support'
+    'A clock designed to be seen, not hidden',
+    'Full-screen focus tools that stay out of your way',
+    'Native on Mac with keyboard shortcuts and polished settings'
   ];
 
   return `
     <section class="hero" id="top">
       <div class="container hero-content">
         <div class="hero-copy">
-          <p class="hero-eyebrow"><span class="hero-eyebrow-brand">Liquid Clock</span><span>Calm time, beautifully displayed</span></p>
-          <h1 class="hero-title">Turn your screen into a <span class="gradient-text">clock worth leaving on.</span></h1>
+          <p class="hero-eyebrow"><span class="hero-eyebrow-brand">Liquid Clock</span><span>Time, beautifully displayed</span></p>
+          <h1 class="hero-title">A <span class="gradient-text">clock worth leaving on.</span></h1>
           <p class="hero-subtitle">Liquid Clock transforms your iPhone, iPad, or Mac into a beautiful flip-style clock with a home screen widget, focus sessions, countdown tools, and smart display behavior for bedside and desk use.</p>
           <div class="hero-actions">
             <a href="${appStoreUrl}" class="btn btn-primary" target="_blank" rel="noreferrer">Download on the App Store</a>
@@ -36,38 +34,12 @@ export default function Hero() {
           <ul class="hero-points">
             ${heroPoints.map((point) => `<li>${point}</li>`).join('')}
           </ul>
-          <p class="hero-caption">Designed to stay visible, feel calm, and help you focus.</p>
+          <p class="hero-caption">Designed to stay visible, feel natural, and help you focus.</p>
         </div>
         <div class="hero-visual">
           <div class="hero-orb hero-orb-a"></div>
           <div class="hero-orb hero-orb-b"></div>
-          <div class="showcase-frame">
-            <div class="showcase-topbar">
-              <span>App Store screenshots</span>
-              <span>iPhone, iPad + Mac</span>
-            </div>
-            <div class="showcase-stage">
-              <figure class="showcase-device showcase-device-tablet">
-                <img src="${heroTabletImage}" alt="Liquid Clock full-screen flip clock on iPad" class="hero-screenshot-img hero-screenshot-tablet" />
-              </figure>
-              <figure class="showcase-device showcase-device-phone">
-                <img src="${heroPhoneImage}" alt="Liquid Clock full-screen flip clock on iPhone" class="hero-screenshot-img hero-screenshot-phone" />
-              </figure>
-              <figure class="showcase-device showcase-device-mac">
-                <img src="${heroMacImage}" alt="Liquid Clock on macOS" class="hero-screenshot-img hero-screenshot-mac" />
-              </figure>
-            </div>
-            <div class="showcase-notes">
-              <div class="showcase-chip">
-                <strong>Widget</strong>
-                <span>Home screen flip clock</span>
-              </div>
-              <div class="showcase-chip">
-                <strong>Mac + iPad</strong>
-                <span>Native desktop and tablet</span>
-              </div>
-            </div>
-          </div>
+          <img src="${heroImage}" alt="Liquid Clock on iPhone, iPad, and Mac — a clock worth leaving on" class="hero-image" />
         </div>
       </div>
       <div class="container">
