@@ -1,11 +1,12 @@
 import './Footer.css';
 
-export default function Footer() {
+export default function Footer(currentTheme) {
   const appStoreUrl = 'https://apps.apple.com/cn/app/liquid-clock-no-ads/id6757009818';
+  const theme = currentTheme || 'auto';
 
   return `
     <footer class="site-footer">
-      <div class="container footer-shell">
+      <div class="container footer-content">
         <div class="footer-top">
           <div class="footer-brand">
             <p class="footer-heading">Liquid Clock</p>
@@ -22,8 +23,12 @@ export default function Footer() {
           </div>
         </div>
         <div class="footer-bottom">
+          <div class="footer-theme-toggle">
+            <button data-theme="light" class="theme-btn${theme === 'light' ? ' active' : ''}" aria-label="Light mode">Light</button>
+            <button data-theme="dark" class="theme-btn${theme === 'dark' ? ' active' : ''}" aria-label="Dark mode">Dark</button>
+            <button data-theme="auto" class="theme-btn${theme === 'auto' ? ' active' : ''}" aria-label="Auto mode">Auto</button>
+          </div>
           <p>&copy; ${new Date().getFullYear()} Liquid Clock. All rights reserved.</p>
-          <p>A clock worth leaving on — for deep work, bedside use, and everyday timing.</p>
         </div>
       </div>
     </footer>

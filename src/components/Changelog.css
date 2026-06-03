@@ -8,9 +8,8 @@
     line-height: 1.6;
     margin-bottom: 28px;
     padding: 16px 20px;
-    border-radius: 16px;
-    background: rgba(251, 89, 118, 0.06);
-    border: 1px solid rgba(251, 89, 118, 0.1);
+    border-radius: 8px;
+    background: var(--color-bg-soft);
 }
 
 .changelog-stats {
@@ -22,12 +21,10 @@
 
 .changelog-stat {
     padding: 28px 24px;
-    border-radius: 24px;
-    background: var(--color-surface);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, 0.78);
-    box-shadow: var(--shadow-soft);
+    border-radius: 12px;
+    background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-bg-soft) 100%);
+    border: 1px solid var(--color-line);
+    box-shadow: var(--shadow-sm);
     text-align: center;
     display: grid;
     gap: 6px;
@@ -63,24 +60,18 @@
     top: 12px;
     bottom: 12px;
     width: 2px;
-    background: linear-gradient(180deg,
-        var(--color-primary) 0%,
-        rgba(251, 89, 118, 0.4) 30%,
-        rgba(251, 89, 118, 0.15) 70%,
-        rgba(251, 89, 118, 0.04) 100%);
+    background: var(--color-line);
     border-radius: 1px;
 }
 
 .changelog-release {
     position: relative;
-    border-radius: 30px;
-    background: rgba(255, 252, 247, 0.5);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--color-glass-border);
-    box-shadow: var(--shadow-glass);
+    border-radius: 16px;
+    background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-bg-soft) 100%);
+    border: 1px solid var(--color-line);
+    box-shadow: var(--shadow-sm);
     overflow: hidden;
-    transition: transform var(--transition-glass), box-shadow var(--transition-glass);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
     margin-bottom: 28px;
 }
 
@@ -97,24 +88,24 @@
     height: 14px;
     border-radius: 50%;
     background: var(--color-primary);
-    box-shadow: 0 0 0 6px rgba(251, 89, 118, 0.12), 0 0 24px rgba(251, 89, 118, 0.2);
+    box-shadow: 0 0 0 6px rgba(251, 89, 118, 0.12);
     z-index: 1;
 }
 
 .changelog-release:first-child::before {
-    background: #fff;
-    box-shadow: 0 0 0 6px rgba(251, 89, 118, 0.18), 0 0 32px rgba(251, 89, 118, 0.3);
+    background: var(--color-surface);
+    box-shadow: 0 0 0 6px rgba(251, 89, 118, 0.18);
     border: 3px solid var(--color-primary);
 }
 
 .changelog-release:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-glass-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .changelog-release-head {
     padding: 28px 32px 20px;
-    border-bottom: 1px solid rgba(23, 34, 51, 0.06);
+    border-bottom: 1px solid var(--color-line);
     display: grid;
     gap: 12px;
 }
@@ -128,8 +119,8 @@
 .changelog-version {
     display: inline-flex;
     padding: 8px 14px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, var(--color-primary), #ff7d94);
+    border-radius: 6px;
+    background: var(--color-primary);
     color: #fff;
     font-family: var(--font-heading);
     font-size: 0.88rem;
@@ -146,8 +137,8 @@
 .changelog-commits {
     margin-left: auto;
     padding: 5px 10px;
-    border-radius: 999px;
-    background: rgba(23, 34, 51, 0.05);
+    border-radius: 6px;
+    background: var(--color-bg-soft);
     color: var(--color-text-muted);
     font-size: 0.78rem;
     font-weight: 600;
@@ -210,7 +201,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: rgba(23, 34, 51, 0.16);
+    background: rgba(29, 29, 47, 0.16);
 }
 
 @media (max-width: 840px) {
@@ -271,10 +262,10 @@
         top: 28px;
         width: 10px;
         height: 10px;
-        box-shadow: 0 0 0 4px rgba(251, 89, 118, 0.12), 0 0 16px rgba(251, 89, 118, 0.2);
+        box-shadow: 0 0 0 4px rgba(251, 89, 118, 0.12);
     }
 
     .changelog-release:first-child::before {
-        box-shadow: 0 0 0 4px rgba(251, 89, 118, 0.18), 0 0 20px rgba(251, 89, 118, 0.3);
+        box-shadow: 0 0 0 4px rgba(251, 89, 118, 0.18);
     }
 }

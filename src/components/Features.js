@@ -1,6 +1,7 @@
 import './Features.css';
 import screenshotFocusTablet from '../assets/clocks/iPad-13-V01-02.png';
-import screenshotWidgetPhone from '../assets/clocks/iPhone-6-9-V01-07.png';
+import screenshotWidgetPhone from '../assets/clocks/iPhone-6-9-V01-08.png';
+import screenshotLivestreamsPhone from '../assets/clocks/iPhone-6-9-V01-07.png';
 import screenshotMacOS from '../assets/clocks/macOS-14-2-V01-03.png';
 
 export default function Features() {
@@ -116,7 +117,22 @@ export default function Features() {
       ],
       label: 'Widget + i18n',
       image: screenshotWidgetPhone,
-      alt: 'Liquid Clock widget and internationalization on iPhone',
+      alt: 'Liquid Clock home screen widgets on iPhone',
+      device: 'iPhone screenshot',
+      orientation: 'portrait'
+    },
+    {
+      title: 'Ready for Livestreams',
+      body: 'Liquid Clock is built for the big screen. Use the flip clock as a full-screen overlay during livestreams, presentations, or recording sessions — a clean, professional time display that stays out of the way.',
+      bullets: [
+        'Full-screen clock for livestream overlays',
+        'Clean, distraction-free time display',
+        'Customizable colors to match your brand',
+        'Mirror effect for HUD-style setups'
+      ],
+      label: 'Livestreams',
+      image: screenshotLivestreamsPhone,
+      alt: 'Liquid Clock ready for livestreams on iPhone',
       device: 'iPhone screenshot',
       orientation: 'portrait'
     },
