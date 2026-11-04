@@ -3,6 +3,26 @@ import './Changelog.css';
 export default function Changelog() {
   const releases = [
     {
+      version: '2.6.1',
+      date: 'October 2026',
+      commits: 3,
+      label: 'Personal Backgrounds at Startup',
+      sections: [
+        {
+          title: 'Bug Fix',
+          items: [
+            'Personal photo and video backgrounds keep your selected theme when you launch Liquid Clock, without a brief flash of the default pink gradient.'
+          ]
+        },
+        {
+          title: 'Under the Hood',
+          items: [
+            'Updated QuickPurchase to 2.2.0.'
+          ]
+        }
+      ]
+    },
+    {
       version: '2.4.0',
       date: 'June 2026',
       commits: 32,
@@ -133,8 +153,8 @@ export default function Changelog() {
   ];
 
   const stats = [
-    { value: '104', label: 'Commits' },
-    { value: '4', label: 'Releases' },
+    { value: releases.reduce((total, release) => total + release.commits, 0), label: 'Commits' },
+    { value: releases.length, label: 'Releases' },
     { value: '10', label: 'Languages' },
     { value: '410', label: 'Translated strings' }
   ];
@@ -149,7 +169,7 @@ export default function Changelog() {
           </div>
         </div>
 
-        <p class="changelog-summary">May 1 – June 2, 2026 — 104 commits across four releases. Headline features: Pin Window (2.4), Widget + i18n (2.3), Mirror Effect (2.2), macOS (2.1).</p>
+        <p class="changelog-summary">Selected releases from May to October 2026, covering macOS support, the flip clock widget, and a fix for personal backgrounds at startup.</p>
 
         <div class="changelog-stats">
           ${stats.map((stat) => `
